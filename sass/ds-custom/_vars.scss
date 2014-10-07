@@ -1,0 +1,46 @@
+/*!
+Custom CSS for Design Science 2014 redesign
+Created October 2, 2014 by WTW Design Group http://wtwdesigngroup.com
+Updated October 7, 2014 by WTW Design Group:Karen via Sass (/scss/style.scss)
+Based on the Skeleton CSS Framework http://www.getskeleton.com/
+Using the Bourbon Sass Library http://bourbon.io/
+*/
+
+// - - - - - - - Variables - - - - - - - 
+
+// - - - COLORS
+$blue-dark:	rgb(0,46,94);
+$blue-medium: rgb(0,45,98);
+$blue-light: rgb(0,117,188);
+$yellow: rgb(255,207,1);
+
+
+// - - - FONTS
+$base-font: 16px;
+$body-font: 1.06 * $base-font;
+$sans-serif: 'Open Sans', sans-serif;
+$decorative: 'Questrial', sans-serif;
+$icon-font: 'Wingdings', 'Calibri';
+/* Open Sans and Questrial or Google fonts
+Link in the head: <link href='http://fonts.googleapis.com/css?family=Questrial|Open+Sans:400italic,300,700,800,400' rel='stylesheet' type='text/css'>
+*/
+/*
+↗︎
+NORTH EAST ARROW
+Unicode: U+2197 U+FE0E, UTF-8: E2 86 97 EF B8 8E
+Hex: "&#x2197;&#xFE0E;"
+in Calibri Bold Italic
+example: <span class="icon-font">&#x2197;&#xFE0E;</span>
+*/
+$font-color: #000;
+$headline-color: $blue-dark;
+$sub-head-color: $blue-medium;
+
+// - - - LAYOUT
+$utility-height: 40px;
+$main-header-height: 90px;
+$footer-height: $main-header-height;
+
+
+// - - - OTHER
+$image-folder:	"../images/ds/";

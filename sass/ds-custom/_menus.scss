@@ -1,0 +1,131 @@
+/*! custom menu styling for Design Science 2014 redesign */
+
+nav	{
+	position: relative;
+}
+
+.main-menu	{
+	position: absolute; right: -1px; top: -15px;
+	height: $main-header-height; width: auto;
+	margin: 0; padding: 0;
+	
+	li {
+		display: inline-block;
+		position: relative;
+		height: 100%;
+		padding: 0; margin: 0;
+		
+		a {
+			display:block;
+			//float: left;
+			height: ($main-header-height - 70px);
+			padding: 35px 1.5em;
+			font-size: 1rem;
+			font-weight: bold;
+			position: relative;
+			color: $blue-dark;
+			text-transform: uppercase;
+			text-align: center;
+
+			&:hover	{
+				background: $blue-dark;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		&:hover .level-1	{
+			display: block;
+		}
+			
+		ul.level-1	{
+			position: absolute; top: $main-header-height; left: 0;
+			margin: 0; padding: 0;
+			width: auto;
+			display: none;
+			text-align: left;
+			background-color: rgba(255,255,255,.85);
+			z-index: 1000;
+			
+			&:first-child	{
+				padding-top: 1em;
+			}
+				
+			li	{
+				width: auto;		
+				a	{
+					display: block;
+					min-height: 1em;
+					//width: auto;
+					overflow: visible;
+					font-weight: normal;
+					color: $blue-medium;
+					background: transparent;
+					text-transform: capitalize;
+					text-align: left;
+					font-size: .8rem;
+					padding: .5em .5em .5em 1em;
+					
+					:hover	{
+						background: transparent;
+						text-decoration: underline;
+					}
+				}					
+				
+				&.info-footer	{
+					a	{
+						border-top: 2px solid $blue-dark;
+						color: $blue-dark;
+						font-weight: bold;
+						min-height: 1em;
+						margin-top: 1em;
+						padding: .5em .5em .5em 3em;
+						background: transparent url() left bottom no-repeat;
+					}
+				}
+			}
+		}
+	}
+}
+
+.utility	{
+	float: right;
+	
+	li	{
+		display: inline-block;
+		a	{
+			font-size: .75rem;
+			padding: .5em 1em;
+			color: rgba(white, .5);
+			text-decoration: none;
+			text-transform: uppercase;
+
+			:hover	{
+				text-decoration: underline;
+				color: #fff;
+			}
+		}
+	}
+	&:first-child a	{
+		padding-left: 0;
+	}
+
+}
+
+.menu-footer	{
+	@extend .utility;
+	float: left;
+	
+}
+
+.breadcrumbs	{
+	@extend .utility;
+	float: left;
+	position: absolute;
+	top: -3rem; left:10px;
+	text-transform: uppercase;
+	
+	&:first-child a	{
+		padding-left: 0;
+	}
+
+}
