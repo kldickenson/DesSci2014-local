@@ -1,16 +1,7 @@
-original stylesheets
-original stylesheets/**
-original stylesheets/*
+/.sass-cache
 
-sass/bourbon
-sass/bourbon/**
-sass/bourbon/*
+/css
 
-sass/skeleton
-sass/skeleton/**
-sass/skeleton/*
+/dhg-Skeleton-7ab6820.tar.gz
 
-css
-css/**
-
-*.tar.gz
+/original stylesheets
