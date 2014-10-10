@@ -6,9 +6,13 @@
 // Bourbon mixins
 @import "bourbon/bourbon";
 
+// jQuery bxSlider http://bxslider.com/
+@import "slider/bxslider";
+
 // Customization for Design Science
 @import "ds-custom/vars";
 @import "ds-custom/header";
 @import "ds-custom/footer";
 @import "ds-custom/menus";
+@import "ds-custom/slider";
 @import "ds-custom/ds-style";
