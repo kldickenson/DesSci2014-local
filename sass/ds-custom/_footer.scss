@@ -1,1 +1,16 @@
 /*! custom footer styling for Design Science 2014 redesign */
+
+	$padding-top: 20px;
+
+footer	{
+	height: $footer-height - $padding-top;
+	padding-top: $padding-top;
+	background: $blue-dark;
+
+	
+	.logo	{
+		background: url(../images/ds/ISD-logo.png) right 15px no-repeat;
+		height: $footer-height - $padding-top;
+		width: 100%;
+	}
+}

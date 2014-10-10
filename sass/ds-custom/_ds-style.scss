@@ -15,14 +15,10 @@ body	{
 h1,h2,h3,h4,h5, h6	{
 	font-family: $sans-serif;
 	color: $headline-color;
-}	
-h2	{
-	// page titles only
-	font-size: 2.0rem;
-	position: absolute;
-	top: -8rem; left: 0;
-	color: #fff;
 }
+	
+// see h2.page-title under LAYOUTS section
+
 h3	{
 	font-size: 1.8rem;
 }
@@ -53,77 +49,71 @@ a	{
 	color: $blue-light;
 	text-decoration: none;
 	
-	:hover	{
+	&:hover, &:focus	{
 		text-decoration: underline;	
 	}
-}
-
-.tagline	{
-	text-transform: uppercase;
-	color: #fff;
-	font-size: .9rem;
-	font-weight: 600;
-	vertical-align: center;
-	letter-spacing: 1px;
-
-	.yellow	{
-		color: $yellow;
+	p &	{
+		color: $blue-light !important;
 	}
 }
 
-caption	{
-	font-size: 0.8rem;
+.img-with-caption	{
+	margin: 0 0 20px 20px;
+	 img	{
+		 float: none;
+		 display: block;
+		 margin-bottom: 5px;
+	}
+	p	{
+		font-size: 0.65rem;
+		width: 90%;
+	}
 }
+
 span.icon-font	{
 	font-family: $icon-font;
 	font-weight: bold;
 	font-style: italic;
 }
 
-// - - - - - LOGOS - - - - - 
-.logo	{
-	text-indent: -2000px;
+abbr[title]	{
+	border-bottom: 1px dotted $blue-light;
 }
-h1.logo	{
-		background: url(../images/ds/DS-logo.png) left center no-repeat;
-	}
+acronym[title]	{
+	@extend abbr[title];
+}
+cite	{
+	font-weight: bold;
+	font-style: italic;
+}
+
+dt	{
+	margin-top: .5em;
+}
+table
 
 // - - - - - LAYOUT - - - - - 
 
-header	{
-	height:($utility-height + $main-header-height +$footer-height);
-	background: url(../images/ds/DS-header-bkgrd.jpg) left center no-repeat;
-
-}
-	.header-utility	{
-		height: $utility-height;
-		padding-top: 1.5%;
-		background: rgba($blue-dark, .7);
-	}
-	
-	.header-main	{
-		height: $main-header-height;
-		background: rgba(white, .85);
-	}
-
+// See -header.scss for header layout issues
 
 .content	{
-	margin-top: 5rem;
+	/*margin-top: 8rem;*/
 	z-index: 500;
-
+	position: relative;
 }
-footer	{
-	height: $footer-height;
-	padding-top: 20px;
-	background: $blue-dark;
 
-	.menu-footer	{
-		margin-top: 20px;
-	}
+section	{
+	position: relative;
 	
-	.logo	{
-		background: url(../images/ds/ISD-logo.png) right center no-repeat;
-		height: 50px; width: 100%;
-		position: relative; right: 0; top: 20px;
+	.first	{
+		margin-top: 4rem;
 	}
 }
+
+h2.page-title	{
+	font-size: 2.0rem;
+	position: absolute;
+	top: -7rem; left: 0;
+	color: #fff;
+}
+

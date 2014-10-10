@@ -5,7 +5,7 @@ nav	{
 }
 
 .main-menu	{
-	position: absolute; right: -1px; top: -15px;
+	position: absolute; right: -1px; top: -11px;
 	height: $main-header-height; width: auto;
 	margin: 0; padding: 0;
 	
@@ -18,8 +18,9 @@ nav	{
 		a {
 			display:block;
 			//float: left;
-			height: ($main-header-height - 70px);
-			padding: 35px 1.5em;
+			$padding-top-bottom: 35px;
+			min-height: ($main-header-height - ($padding-top-bottom*2));
+			padding: $padding-top-bottom 1.5em;
 			font-size: 1rem;
 			font-weight: bold;
 			position: relative;
@@ -40,7 +41,7 @@ nav	{
 		ul.level-1	{
 			position: absolute; top: $main-header-height; left: 0;
 			margin: 0; padding: 0;
-			width: auto;
+			width: 15em;
 			display: none;
 			text-align: left;
 			background-color: rgba(255,255,255,.85);
@@ -51,12 +52,11 @@ nav	{
 			}
 				
 			li	{
-				width: auto;		
+				width: 100%;		
 				a	{
 					display: block;
-					min-height: 1em;
-					//width: auto;
-					overflow: visible;
+					//min-height: 1em;
+					//overflow: visible;
 					font-weight: normal;
 					color: $blue-medium;
 					background: transparent;
@@ -65,21 +65,41 @@ nav	{
 					font-size: .8rem;
 					padding: .5em .5em .5em 1em;
 					
-					:hover	{
-						background: transparent;
-						text-decoration: underline;
+					&:hover	{
+						background: rgba($blue-medium, .8);
+						color: white;
+						//text-decoration: underline;
 					}
 				}					
 				
 				&.info-footer	{
 					a	{
-						border-top: 2px solid $blue-dark;
-						color: $blue-dark;
+						border-top: 2px solid $blue-medium;
+						color: $blue-medium;
 						font-weight: bold;
-						min-height: 1em;
-						margin-top: 1em;
-						padding: .5em .5em .5em 3em;
-						background: transparent url() left bottom no-repeat;
+						//min-height: 1em;
+						//margin-top: 1em;
+						padding: .75em .5em .75em 3.5em;
+						background: transparent url(../images/ds/ds-menu-icons.png) 0.5em -5px no-repeat;
+						
+						&.visit	{
+							//background-position:0.5em -5px;
+						}
+						&.apply	{
+							background-position:0.5em -55px;
+						}
+						&.discover	{
+							background-position:0.5em -105px;
+						}
+						&.connect	{
+							background-position:0.5em -155px;
+						}
+					
+						&:hover	{
+							//background: rgba($blue-dark, .8);
+							color: $blue-light;
+							text-decoration: underline;
+						}
 					}
 				}
 			}
@@ -92,8 +112,8 @@ nav	{
 	
 	li	{
 		display: inline-block;
-		a	{
 			font-size: .75rem;
+		a	{
 			padding: .5em 1em;
 			color: rgba(white, .5);
 			text-decoration: none;
@@ -114,18 +134,25 @@ nav	{
 .menu-footer	{
 	@extend .utility;
 	float: left;
-	
+	margin-top: 20px;
 }
 
 .breadcrumbs	{
 	@extend .utility;
 	float: left;
 	position: absolute;
-	top: -3rem; left:10px;
+	top: -2.5rem; left:10px;
 	text-transform: uppercase;
-	
+	a	{
+		
+		&:after	{
+			margin-left: 1em;;
+			content: "/";
+			}
+	}
 	&:first-child a	{
 		padding-left: 0;
-	}
+		color: $blue-light;
 
+	}
 }

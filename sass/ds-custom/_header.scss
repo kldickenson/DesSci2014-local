@@ -1,1 +1,41 @@
 /*! custom header styling for Design Science 2014 redesign */
+
+.tagline	{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: .9rem;
+	font-weight: 600;
+	vertical-align: center;
+	letter-spacing: 1px;
+
+	.yellow	{
+		color: $yellow;
+	}
+}
+
+// - - - - - LOGOS - - - - - 
+.logo	{
+	text-indent: -2000px;
+}
+h1.logo	{
+		background: url(../images/ds/DS-logo.png) left center no-repeat;
+		margin: 0; padding: 0;
+		height: 70px;
+	}
+
+header	{
+	height:($utility-height + $main-header-height +$footer-height);
+	background: url(../images/ds/DS-header-bkgrd.jpg) left center no-repeat;
+
+}
+	.header-utility	{
+		height: $utility-height;
+		padding-top: 1.5%;
+		background: rgba($blue-dark, .7);
+	}
+	
+	.header-main	{
+		height: $main-header-height;
+		background: rgba(white, .85);
+	}
+
