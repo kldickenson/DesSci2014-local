@@ -39,3 +39,8 @@ header	{
 		background: rgba(white, .85);
 	}
 
+// - - - - - Homepage specific - - - - -
+
+body.homepage header	{
+	height: 150px;
+}

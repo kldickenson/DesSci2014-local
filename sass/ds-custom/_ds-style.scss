@@ -55,6 +55,24 @@ a	{
 	p &	{
 		color: $blue-light !important;
 	}
+	&.icon	{
+		display: inline-block;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: $yellow;
+		padding-right: 25px;
+		background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
+		
+	}
+}
+
+strong	{
+	color: $yellow;
+	font-weight: bold;
+}
+
+em	{
+	font-variant: italic;
 }
 
 .img-with-caption	{

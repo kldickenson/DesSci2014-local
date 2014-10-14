@@ -1,1 +1,121 @@
 /*! custom homepage slider styling for Design Science 2014 redesign */
+
+.slider	{
+	//background: url(../images/ds/slider-bkgd.jpg) 50% 50% no-repeat;
+	
+	h5	{
+		color: white;
+	}
+	h2	{
+		color: $yellow;
+		font-size: 40px;
+	}
+	
+	p	{
+		color: white;
+	}
+	a	{
+		color: white;
+		
+		&:hover, &:focus, &.active	{
+			color: $yellow;
+		}
+		
+		&.icon	{
+			display: inline-block;
+			font-size: 1.5em;
+			font-weight: bold;
+			color: $yellow;
+			padding-right: 25px;
+			background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
+		}
+	}
+
+}
+
+.bx-wrapper	{
+	background: url(../images/ds/slider-bkgd.jpg) 50% 50% no-repeat;
+	//background: none;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	margin-bottom: 0;
+	position: relative;
+	
+	.bx-viewport	{
+		background: none;
+		border: none;
+		box-shadow: none;
+	}
+	.bx-controls	{
+		position: relative;
+		top: 0px;
+	}
+}
+
+.bx-wrapper .bx-pager.bx-default-pager	{
+	a	{
+		background: white;  
+		&:hover, &.active	{
+			background: $yellow;  
+		}
+	}
+}
+
+
+.scoll	{
+	text-align: center;
+	margin-top: 40px;
+	
+	.active	{
+		a	{
+			font-size: 1.5em;
+			font-weight: bold;
+			color: $yellow;
+			padding-right: 25px;
+			background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
+		}
+	}
+}
+
+.image-bubbles	{
+	$height-width: 72px;
+	li	{
+		width: $height-width; height: $height-width;
+		float: left;
+		margin: 5px;
+		//border: 3px solid $yellow;
+		//border-radius: $height-width/2;
+		
+		}
+	span.img-wrap	{
+		display: block;
+		width: $height-width; height: $height-width;
+		padding: 0;
+		border: 3px solid $yellow;
+		border-radius: $height-width/2;
+	}		
+	img	{
+		width: $height-width +3px; height: $height-width +3px;
+	}
+}
+
+.text	{
+	$height-width: 72px;
+	li	{
+		width: 100%;
+		float: none;
+		clear: both;
+		border: none;
+		border-radius: 0;		
+	}
+	span	{
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	div	{
+		padding-top: 10px;
+	}
+}
+
+
