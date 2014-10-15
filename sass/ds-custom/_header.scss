@@ -26,6 +26,10 @@ h1.logo	{
 header	{
 	height:($utility-height + $main-header-height +$footer-height);
 	background: url(../images/ds/DS-header-bkgrd.jpg) left center no-repeat;
+	z-index: 100;
+	width: 100%;
+	position: absolute;
+	top: 0; left: 0;
 
 }
 	.header-utility	{
@@ -36,11 +40,6 @@ header	{
 	
 	.header-main	{
 		height: $main-header-height;
-		background: rgba(white, .85);
+		background: rgba(white, .75);
 	}
 
-// - - - - - Homepage specific - - - - -
-
-body.homepage header	{
-	height: 150px;
-}

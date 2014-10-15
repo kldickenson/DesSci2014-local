@@ -1,8 +1,9 @@
 /*! custom homepage slider styling for Design Science 2014 redesign */
 
 .slider	{
-	//background: url(../images/ds/slider-bkgd.jpg) 50% 50% no-repeat;
-	
+	background: url(../images/ds/slider-bkgd.jpg) 50% top no-repeat;
+	z-index: 50;
+	padding-top: 150px;
 	h5	{
 		color: white;
 	}
@@ -34,8 +35,7 @@
 }
 
 .bx-wrapper	{
-	background: url(../images/ds/slider-bkgd.jpg) 50% 50% no-repeat;
-	//background: none;
+	background: none;
 	padding-top: 40px;
 	padding-bottom: 50px;
 	margin-bottom: 0;

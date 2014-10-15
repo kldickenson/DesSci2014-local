@@ -8,6 +8,7 @@ nav	{
 	position: absolute; right: -1px; top: -11px;
 	height: $main-header-height; width: auto;
 	margin: 0; padding: 0;
+	z-index: 1010;
 	
 	li {
 		display: inline-block;
@@ -45,7 +46,7 @@ nav	{
 			display: none;
 			text-align: left;
 			background-color: rgba(255,255,255,.85);
-			z-index: 1000;
+			z-index: 1050;
 			
 			&:first-child	{
 				padding-top: 1em;
