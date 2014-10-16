@@ -1,5 +1,57 @@
 /*! custom homepage pre-footer styling for Design Science 2014 redesign */
 
 .pre-footer	{
+	background: $blue-dark;
+	color: $blue-light;
+	border-bottom: 1px solid black;
+	
+	h4	{
+		//display: inline-block;
+		color: inherit;
+		text-transform: uppercase;
+		padding-top: 1.2rem;
+		//float: left;
+		//margin-right: 1rem;
+	}
+	.title	{
+		color: inherit;
+		font-size: 1rem;
+		
+	}
+	.description	{
+		color: inherit;
+		font-size: .8rem;
+		vertical-align: bottom;
+		margin: 0; padding: 0;
+	}	
+	.date	{
+		color: white;
+		font-size: 3rem;
+		//float: left;
+		width: 4rem;
+	}
+	.month	{
+		color: $blue-light;
+		font-size: 1.8rem;
+		display: block;
+		line-height: 50%;
+	}
+
+}
+
+.event	{
+	//display: inline-block;
+	//float: left;
+	width: 35%;
+	margin-right: 1rem;
+	
+}
+
+.feature	{
+	@extend .event;
+	
+	.title	{
+		color: white;
+	}
 
 }
