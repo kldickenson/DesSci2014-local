@@ -8,7 +8,7 @@ nav	{
 	position: absolute; right: -1px; top: -11px;
 	height: $main-header-height; width: auto;
 	margin: 0; padding: 0;
-	z-index: 1010;
+	z-index: 200;
 	
 	li {
 		display: inline-block;
@@ -46,7 +46,7 @@ nav	{
 			display: none;
 			text-align: left;
 			background-color: rgba(255,255,255,.85);
-			z-index: 1050;
+			z-index: 1010;
 			
 			&:first-child	{
 				padding-top: 1em;
@@ -97,9 +97,9 @@ nav	{
 						}
 					
 						&:hover	{
-							//background: rgba($blue-dark, .8);
+							background-color: $yellow;
 							color: $blue-light;
-							text-decoration: underline;
+							//text-decoration: underline;
 						}
 					}
 				}
@@ -116,11 +116,11 @@ nav	{
 			font-size: .75rem;
 		a	{
 			padding: .5em 1em;
-			color: rgba(white, .5);
+			color: rgba(white, .75);
 			text-decoration: none;
 			text-transform: uppercase;
 
-			:hover	{
+			&:hover, &:focus	{
 				text-decoration: underline;
 				color: #fff;
 			}
@@ -142,7 +142,7 @@ nav	{
 	@extend .utility;
 	float: left;
 	position: absolute;
-	top: -2.5rem; left:10px;
+	top: 1rem; left:10px;
 	text-transform: uppercase;
 	a	{
 		

@@ -26,20 +26,24 @@ h1.logo	{
 header	{
 	height:($utility-height + $main-header-height +$footer-height);
 	background: url(../images/ds/DS-header-bkgrd.jpg) left center no-repeat;
-	z-index: 100;
+	//z-index: 100;
 	width: 100%;
 	position: absolute;
 	top: 0; left: 0;
 
 }
-	.header-utility	{
-		height: $utility-height;
-		padding-top: 1.5%;
-		background: rgba($blue-dark, .7);
-	}
-	
-	.header-main	{
-		height: $main-header-height;
-		background: rgba(white, .75);
-	}
+.header-utility	{
+	height: $utility-height;
+	padding-top: 1.5%;
+	background: rgba($blue-dark, .7);
+	position: relative;
+	z-index: 900;
+}
+
+.header-main	{
+	height: $main-header-height;
+	background: rgba(white, .92);
+	position: relative;
+	z-index: 1000;
+}
 

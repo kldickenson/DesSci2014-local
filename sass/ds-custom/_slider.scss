@@ -3,7 +3,6 @@
 .slider	{
 	background: url(../images/ds/slider-bkgd.jpg) 50% top no-repeat;
 	z-index: 50;
-	padding-top: 150px;
 	h5	{
 		color: white;
 	}
@@ -30,37 +29,73 @@
 			padding-right: 25px;
 			background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
 		}
-	}
 
+	}
+	.slide3	{
+		background: url(../images/ds/ds-truly-unique-img.jpg) 50% -70px no-repeat;
+		height: 289px + 160px !important;
+		
+		p	{
+			line-height: 2em;
+		}
+		.indent	{
+			padding-left: 70px;
+		}
+	}
 }
 
 .bx-wrapper	{
 	background: none;
-	padding-top: 40px;
-	padding-bottom: 50px;
+	//padding-top: 40px;
+	//padding-bottom: 50px;
 	margin-bottom: 0;
 	position: relative;
+	
 	
 	.bx-viewport	{
 		background: none;
 		border: none;
 		box-shadow: none;
+		height: 289px + 160px +50px !important;
 	}
-	.bx-controls	{
-		position: relative;
-		top: 0px;
-	}
-}
+	.bxslider	{
+		.container	{
+			padding-top: 200px;
 
-.bx-wrapper .bx-pager.bx-default-pager	{
-	a	{
-		background: white;  
-		&:hover, &.active	{
-			background: $yellow;  
 		}
 	}
+	.bx-controls	{
+		position: absolute;
+		bottom: 40px; left: 45%;
+		width: 100px;
+		background: transparent;
+		
+		.bx-pager.bx-default-pager	{
+			padding-top: 10px;
+				
+			a	{
+				background: white;  
+			
+				&:hover, &.active	{
+					background: $yellow;  
+				}
+			}
+		}
+	}
+	.bx-controls-direction a	{
+		top: -120px;
+		
+		&.bx-prev	{
+			left: -470px;
+			left: -470%;
+		}
+		&.bx-next	{
+			left: 575px;
+			left: 570%;
+		}
+	}
+	
 }
-
 
 .scoll	{
 	text-align: center;

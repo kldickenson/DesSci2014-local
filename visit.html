@@ -39,9 +39,17 @@
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<!-- Slider files -->
+	<!-- jQuery library (served from Google) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!-- bxSlider Javascript file -->
+	<!-- <script src="js/jquery.bxslider/jquery.bxslider.min.js"></script> -->
+	<!-- bxSlider CSS file -->
+	<!-- <link href="/lib/jquery.bxslider.css" rel="stylesheet" /> INCLUDED IN SASS -->
 	
 </head>
-<body>
+<body class="visit">
 
 <header>
 	<div class="header-utility">
@@ -112,33 +120,58 @@
 </header>
 <div class="content">
 	<div class="container">
+		<div class="visit-header-image">
+			<img src="images/ds/visit-header-image.jpg" alt="Prespective students visiting Design Science" width="960" height="390">
+		</div>
+	</div>
+	<div class="page-title-wrapper">
+		<div class="container">
+			<div class="sixteen columns">
+				<h2 class="page-title">Visit Us</h2>
+			</div>
+		</div>
+	</div>
+	<div class="container">
 		<section>
-			<h2 class="page-title">Design Science at Michigan</h2>
-			<nav>
-				<ul class="breadcrumbs">
-					<li><a href="#">About</a></li>
-					<li class="current-page">Design Science at Michigan</li>
-				</ul>
-			</nav>
-			<article class="first">
-				<div class="row">
-					<div class="eight columns">
-						<p class="intro">The new field of Design Science demands an innovative paradigm for research, education, and practice. The Design Science Program at the University of Michigan engages in the systematic pursuit of design knowledge across all fields.</p>
-						<p>Our program is an unique interdisciplinary paradigm requiring students to integrate two or more traditional disciplines to tackle modern, complex design problems. The <a href="#">U-M Design Science program</a> challenges students to create, study, apply, and teach design principles using quantitative, qualitative, and analytical methods and processes.</p>
-						<p>Offering uncommon breadth in engineering, business, medicine, information, social sciences, and the arts, the program leverages a multitude of top-ten departments across schools and colleges at the University of Michigan. Their customized program of study empowers our students to contribute to participating fields and effectively integrate across them. This allows our graduates to take their place among “the leaders and the best” in the new field of Design Science.</p>
-					</div>
-					<div class="eight columns">
-						<div class="img-with-caption">
-							<img src="images/ds/DS-image-FPO-400x300.jpg" alt="DS-image-FPO-400x300" width="400" height="300" />
-							<p>Design Science students present their projects at the <a href="#">Design Flash</a> open house event.</p>
-						</div>
-						<p><a href="#">Testing the unicode for the North East Arrow: <span class="icon-font">&#x2197;&#xFE0E;</span></a></p>
-
-					</div>
-				</div>			
-			</article>
+			<div class="row">
+				<div class="twelve columns">
+					<nav>
+						<ul class="breadcrumbs">
+							<li><a href="#">About</a></li>
+							<li class="current-page">Visit Us</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="row  first">
+				<div class="six columns">
+					<h3>Visiting the Program</h3>
+					<p>The Design Science Program is located on the University of Michigan’s North Campus—at the heart of the University’s Arts, Engineering, Architecture, and Healthcare centers.</p>
+					<h3>Location</h3>
+					<p>2214 SI-North <br />
+						1075 Beal Avenue <br />
+						Ann Arbor, MI 48109-2112</p>
+					<p>(734) 763-0480 phone<br />
+						(734) 763-2523 fax</p>
+				</div>
+				<div class="six columns">
+					<h3>Schedule a Visit</h3>
+					<p>We encourage you to stop by when it is convenient. But to ensure you are able to meet with key faculty, administrators, and/or students, please plan your visit in advance by contacting us:</p>
+					<img class="alignleft" src="" alt="Gail Carr, Senior Graduate Coordinator" />
+					<p>Senior Graduate Coordinator<br />
+						gailcarr@umich.edu<br />
+						(734) 763-0480</p>
+				</div>
+				<div class="four columns">
+					<h3>Map</h3>
+					<!-- Stand in image for Google Map -->
+					<img src="" alt="" />
+					<!-- Google Map -->
+					<!-- <iframe src="" frameborder="0"> </iframe> -->
+				</div>
+			</div>
 		</section>
-	</div><!-- end of container -->
+	</div>
 </div><!-- end of CONTENT -->
 <footer>
 	<div class="container">
@@ -157,5 +190,14 @@
 </footer>
 <!-- End Document
 ================================================== -->
+
+<!-- Script for bxSlider -->
+<!--
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider();
+	});
+</script>
+-->
 </body>
 </html>

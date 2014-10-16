@@ -124,7 +124,7 @@ table {}
 // See -header.scss for header layout issues
 
 .content	{
-	padding-top: 220px;
+	padding-top: 10.5rem;
 	z-index: 1;
 	position: relative;
 }
@@ -133,16 +133,21 @@ section	{
 	position: relative;
 	
 	.first	{
-		margin-top: 4rem;
+		margin-top: 5rem;
 	}
 }
 
 h2.page-title	{
 	font-size: 2.0rem;
-	position: absolute;
-	top: -7rem; left: 0;
 	color: #fff;
+	z-index:100;
+	padding-left: 10px;
 }
+
+.indent	{
+	padding-left: 10px;
+}
+
 
 // - - - - - Homepage specific - - - - -
 
