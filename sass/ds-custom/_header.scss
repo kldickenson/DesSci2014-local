@@ -25,7 +25,7 @@ h1.logo	{
 
 header	{
 	height:($utility-height + $main-header-height +$footer-height);
-	background: url(../images/ds/DS-header-bkgrd.jpg) left center no-repeat;
+	background: $blue-medium url(../images/ds/DS-header-bkgrd.jpg) 50% center no-repeat;
 	//z-index: 100;
 	width: 100%;
 	position: absolute;

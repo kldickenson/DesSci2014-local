@@ -4,76 +4,79 @@
 	background: $blue-dark;
 	color: $blue-light;
 	border-bottom: 1px solid black;
-	padding: 0 0 .5rem;
 	
 	h4	{
-		//display: inline-block;
+		float: left;
+		width: 22%;
+		padding-top: 2.1rem;
 		color: inherit;
 		text-transform: uppercase;
-		padding-top: 2.1rem;
-		float: left;
-		//margin-right: 1rem;
-		width: 22%;
 		font-size: 1rem;
 		letter-spacing: 1px;
 	}
+	a	{
+		display: inline-block;
+	}
 	.title	{
+		margin-bottom: .1em;
 		color: inherit;
 		font-size: 1rem;
-		margin-bottom: .1em;
 	}
 	p.description	{
+		display: inline-block;
+		width: 68%;
+		margin: 0; 
+		margin-bottom: .5rem;
+		padding: 0;
 		color: $blue-light;
 		font-size: .7rem;
-		margin: 0; padding: 0;
-		width: 68%;
-		display: inline-block;
 		font-weight: bold;
 	}	
-	.date	{
-		color: white;
-		font-size: 2.2rem;
-		line-height: 120%;
-		display: inline-block;
-		//float: left;
-		width: 28%;
-		//padding-top: .6rem;
-	}
-	.month	{
-		color: $blue-light;
-		font-size: 1.3rem;
-		display: block;
-		line-height: 75%;
-	}
-}
 
-.event	{
-	float: left;
-	width: 37%;
-	padding-right: 0.5rem;
-	padding-top: 1rem;
-	padding-bottom: .3rem;
-	border-bottom: .3rem solid transparent;
-	&:hover	{
-		//background: rgba(white,.5);
-		border-bottom: .3rem solid $yellow;
-	}
-}
-
-.seven h4	{
-	width: 30%;
-}
-.feature	{
-	@extend .event;
-	width: 65%;
-	margin-right: 0;
-	padding-top: 1.5rem;
+	.event	{
+		float: left;
+		width: 37%;
+		padding-right: 0.5rem;
+		padding-top: 1rem;
+		
+		a	{
+			border-bottom: .3rem solid transparent;
 	
-	.title	{
-		color: white;
-		width: 100%;
+			&:hover	{
+				border-color: $yellow;
+			}
+		}
+		.date	{
+			color: white;
+			font-size: 2.2rem;
+			line-height: 120%;
+			display: inline-block;
+			width: 28%;
+		}
+		.month	{
+			color: $blue-light;
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			display: block;
+			line-height: 75%;
+		}
 	}
-	.description	{
-		width: 100%;
+	
+	.seven h4	{
+		width: 30%;
+	}
+	.feature	{
+		@extend .event;
+		width: 65%;
+		margin-right: 0;
+		padding-top: 1.5rem;
+		
+		.title	{
+			color: white;
+			width: 100%;
+		}
+		.description	{
+			width: 100%;
+		}
 	}
 }

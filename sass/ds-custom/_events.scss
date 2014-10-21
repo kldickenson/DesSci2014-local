@@ -1,0 +1,91 @@
+/*! custom events styling for Design Science 2014 redesign */
+
+.events	{
+	.first	{
+		margin-top: 6.2rem;
+	}
+	
+	a	{
+		&:hover	{
+			text-decoration: none;
+		}
+	}
+
+	.event	{
+		//height: ;
+		border-top: 2px solid $blue-light;
+		width: 100%;
+		min-height: 200px;
+		margin-bottom: 20px;
+				
+		&:hover	{
+			border-color: $yellow;
+			text-decoration: none;
+		}
+	}
+	.date	{
+		color: $sub-head-color;
+		font-size: 2.5rem;
+		line-height: 120%;
+		display: inline-block;
+		width: 28%;
+		vertical-align: top;
+		
+		&:hover	{
+			//color: $yellow;
+		}
+	}
+	.month	{
+		color: inherit;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		display: block;
+		line-height: 75%;
+	}
+	.info	{
+		display: inline-block;
+		width: 70%;
+		color: $font-color;
+		//margin-left: 28%;
+	}
+	h3.speaker	{
+		color: $headline-color;
+		font-size: 1.5rem;
+		margin-bottom: 0;
+		&:hover	{
+			//color: $yellow;
+		}
+			
+	}
+	.company	{
+		color: inherit;
+		
+		a	{
+			color: $blue-light;
+			&:hover	{
+				color: $yellow;
+			}
+		}
+	}
+	p.description	{
+		font-style: italic;
+		color: inherit;
+		&:hover	{
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+	time	{
+	
+	}
+	.room	{
+	
+	}
+	.building	{
+	
+	}
+	.series	{
+	
+	}
+
+}
