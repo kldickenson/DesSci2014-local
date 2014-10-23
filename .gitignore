@@ -1,7 +1,5 @@
 /.sass-cache
 
-/css/style.css
-
 /dhg-Skeleton-7ab6820.tar.gz
 
 /original stylesheets
@@ -9,3 +7,9 @@
 /sass/bourbon
 
 /sass/skeleton
+
+README.md
+
+/js/jquery.bxslider
+
+/js/jquery.bxslider.zip
