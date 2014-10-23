@@ -7,10 +7,34 @@ footer	{
 	padding-top: $padding-top;
 	background: $blue-dark;
 
+	@media only screen and (max-width: 600px)	{
+		padding-top: 0;
+		height: $footer-height;
+	}
+	
+	.container .eleven.columns	{
+		@media only screen and (max-width: 600px)	{
+			width: 50%;
+			float: left;
+		}		
+
+	}
+	.container .five.columns	{
+		@media only screen and (max-width: 600px)	{
+			width: 50%;
+			float: right;
+		}		
+
+	}
 	
 	.logo	{
 		background: url(../images/ds/ISD-logo.png) right 15px no-repeat;
 		height: $footer-height - $padding-top;
 		width: 100%;
+		
+		@media only screen and (max-width: 600px)	{
+			margin-left: 2rem;
+			margin-top: 1rem;
+		}
 	}
 }

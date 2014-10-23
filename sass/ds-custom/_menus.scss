@@ -1,147 +1,216 @@
 /*! custom menu styling for Design Science 2014 redesign */
 
-nav	{
+#nav
+{
 	position: relative;
+
+   & > a	{
+        display: none;
+    }
+    
+    /* first level */
+    & > ul	{
+		position: absolute; right: -1px; top: -11px;
+		height: $main-header-height; width: auto;
+		margin: 0; padding: 0;
+		z-index: 200;
+    
+		li    {
+			display: inline-block;
+			position: relative;
+			height: 100%;
+			padding: 0; margin: 0;
+			
+			a {
+				display:block;
+				//float: left;
+				$padding-top-bottom: 35px;
+				height: ($main-header-height - ($padding-top-bottom*2));
+				padding: $padding-top-bottom 1.5em;
+				font-size: 1rem;
+				font-weight: bold;
+				position: relative;
+				color: $blue-dark;
+				text-transform: uppercase;
+				text-align: center;
+		
+				&:hover	{
+					background: $blue-dark;
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+			
+			&:hover ul	{
+				display: block;
+			}
+	    
+			/* second level */
+			ul	{
+				position: absolute; top: $main-header-height; left: 0;
+				margin: 0; padding: 0;
+				width: 15em;
+				display: none;
+				text-align: left;
+				background-color: rgba(255,255,255,.85);
+				z-index: 1010;
+				
+				&:first-child	{
+					padding-top: 1em;
+				}
+				
+				&:hover	{
+					display: block;		
+				}
+				
+				li	{
+					width: 100%;		
+					
+					a	{
+						display: block;
+						//min-height: 1em;
+						//overflow: visible;
+						font-weight: normal;
+						color: $blue-medium;
+						background: transparent;
+						text-transform: capitalize;
+						text-align: left;
+						font-size: .8rem;
+						padding: .5em .5em .5em 1em;
+						line-height: 1.2em;
+						
+						&:hover	{
+							background: rgba($blue-medium, .8);
+							color: white;
+							//text-decoration: underline;
+						}
+					}					
+
+					&.info-footer	{
+						a	{
+							border-top: 2px solid $blue-medium;
+							color: $blue-medium;
+							font-weight: bold;
+							//min-height: 1em;
+							//margin-top: 1em;
+							padding: .75em .5em .75em 3.5em;
+							background: transparent url(../images/ds/ds-menu-icons.png) 0.5em -5px no-repeat;
+							
+							&.visit	{
+								//background-position:0.5em -5px;
+							}
+							&.apply	{
+								background-position:0.5em -55px;
+							}
+							&.discover	{
+								background-position:0.5em -105px;
+							}
+							&.connect	{
+								background-position:0.5em -155px;
+							}
+						
+							&:hover	{
+								background-color: $yellow;
+								color: $blue-light;
+								//text-decoration: underline;
+							}
+						}
+					}
+				} 
+			}
+	    }
+	}
 }
 
-.main-menu	{
-	position: absolute; right: -1px; top: -11px;
-	height: $main-header-height; width: auto;
-	margin: 0; padding: 0;
-	z-index: 200;
-	
-	li {
-		display: inline-block;
-		position: relative;
-		height: 100%;
-		padding: 0; margin: 0;
-		
-		a {
-			display:block;
-			//float: left;
-			$padding-top-bottom: 35px;
-			min-height: ($main-header-height - ($padding-top-bottom*2));
-			padding: $padding-top-bottom 1.5em;
-			font-size: 1rem;
-			font-weight: bold;
-			position: relative;
-			color: $blue-dark;
-			text-transform: uppercase;
-			text-align: center;
 
-			&:hover	{
-				background: $blue-dark;
-				color: #fff;
-				text-decoration: none;
-			}
+
+@media only screen and (max-width: 600px)	{
+	#nav	{
+		position: relative;
+//		top: 50px;
+
+		&:not( :target ) > a:first-of-type,
+        &:target > a:last-of-type	{
+            display: inline-block;
+            position: absolute;
+            top: -40px; right: 5px;
+            }
+
+		&:target > ul	{
+            display: block;	            	
 		}
-		&:hover .level-1	{
-			display: block;
-		}
-			
-		ul.level-1	{
-			position: absolute; top: $main-header-height; left: 0;
-			margin: 0; padding: 0;
-			width: 15em;
-			display: none;
-			text-align: left;
-			background-color: rgba(255,255,255,.85);
-			z-index: 1010;
-			
-			&:first-child	{
-				padding-top: 1em;
-			}
-				
+
+		& > ul	{
+			height: auto;
+	        display: none;
+	        position: absolute;
+//	        left: 0;
+//	        right: 0;
+	        top: 0;
+	        margin: 0; padding: 0;
+
 			li	{
-				width: 100%;		
-				a	{
-					display: block;
-					//min-height: 1em;
-					//overflow: visible;
-					font-weight: normal;
-					color: $blue-medium;
-					background: transparent;
-					text-transform: capitalize;
-					text-align: left;
-					font-size: .8rem;
-					padding: .5em .5em .5em 1em;
-					
+	            width: 100%;
+	            float: none;
+	            margin: 0; padding: 0;
+	            padding-top: 0;
+	            
+	           & > a	{
+		            color: white;
+		            background-color: rgba($blue-dark, .8);
+		            text-align: left;
+		            height: auto;
+		            padding: .5em 1em;
 					&:hover	{
-						background: rgba($blue-medium, .8);
+						background-color: rgba($blue-medium, .8);
+	            	}
+            	}
+				a	{
+		            background-color: $blue-light;
+		            color: white;
+		            text-align: left;
+		            height: auto;
+		            padding: .5em 1em;
+					&:hover	{
 						color: white;
-						//text-decoration: underline;
-					}
-				}					
-				
-				&.info-footer	{
-					a	{
-						border-top: 2px solid $blue-medium;
-						color: $blue-medium;
-						font-weight: bold;
-						//min-height: 1em;
-						//margin-top: 1em;
-						padding: .75em .5em .75em 3.5em;
-						background: transparent url(../images/ds/ds-menu-icons.png) 0.5em -5px no-repeat;
-						
-						&.visit	{
-							//background-position:0.5em -5px;
+						background-color: $blue-light;
+//						border-bottom: 1px solid white;
+	            	}
+            	}
+			
+				/* second level */
+				ul	{
+					display: block;
+			        position: static;
+			        width: 100%;
+
+					li	{
+						width: 100%;
+
+						a	{
+							padding-left:3em;
+							background-color: rgba($blue-medium, .8);
+							color: white;
+							&:hover	{
+								background-color: $blue-light;
+//								border-bottom: 1px solid white;
+							}
 						}
-						&.apply	{
-							background-position:0.5em -55px;
-						}
-						&.discover	{
-							background-position:0.5em -105px;
-						}
-						&.connect	{
-							background-position:0.5em -155px;
-						}
-					
-						&:hover	{
-							background-color: $yellow;
-							color: $blue-light;
-							//text-decoration: underline;
+						&.info-footer a {
+							background: none;
+							padding: .5em .5em .5em 3em;
+							border-top: none;
+							background-color: rgba($blue-medium, .8);
+							color: white;
+							&:hover	{
+								background-color: $blue-light;
+								color: white;
+							}						
 						}
 					}
 				}
 			}
 		}
-	}
-}
-
-.mobile-menu	{
-	display: none;
-	.mobile-menu-icon	{
-		width:30px;
-	    height:5px;
-	    background-color:#111;
-	    border-radius:5px;
-	    position:relative;
-	    
-	    &:after	{
-			content: '';
-			width: 100%;
-			height:5px;
-			background-color:#111;
-			position:absolute;
-			border-radius:5px;
-			top:10px;
-	    }
-	    &:before	{
-			content: '';
-			width: 100%;
-			height:5px;
-			background-color:#111;
-			position:absolute;
-			border-radius:5px;
-			top: 20px;
-	    }
-	}
-	
-}
-
-@media only screen and (max-width: 600px)	{
-	.mobile-menu	{
-		display: block;	
 	}
 }
 
@@ -174,6 +243,18 @@ nav	{
 	@extend .utility;
 	float: left;
 	margin-top: 20px;
+	
+	@media only screen and (max-width: 600px)	{
+		text-align: center;
+		margin-top: .5rem;
+		margin-bottom: 0;
+		font-size: .65rem;
+		li	{
+			width: 100%;
+			margin-bottom: 0;
+		}
+	}
+
 }
 
 .breadcrumbs	{
@@ -193,5 +274,10 @@ nav	{
 		padding-left: 0;
 		color: $blue-light;
 
+	}
+	
+	@media only screen and (max-width: 600px)	{
+		top: 4.2rem;
+		left: 0;	
 	}
 }
