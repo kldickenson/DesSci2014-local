@@ -1343,7 +1343,7 @@ footer {
 
 /*! custom homepage slider styling for Design Science 2014 redesign */
 .slider {
-  background: url(../images/ds/slider-bkgd.jpg) 50% top no-repeat;
+  background: #002e5e;
   z-index: 50; }
   .slider h5 {
     color: white; }
@@ -1365,7 +1365,7 @@ footer {
       background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat; }
   .slider .slide3 {
     background: url(../images/ds/ds-truly-unique-img.jpg) 50% -70px no-repeat;
-    height: 529px !important; }
+    height: 549px !important; }
     .slider .slide3 p {
       line-height: 2em; }
     .slider .slide3 .indent {
@@ -1379,9 +1379,9 @@ footer {
     background: none;
     border: none;
     box-shadow: none;
-    height: 579px !important; }
+    height: 599px !important; }
   .bx-wrapper .bxslider .container {
-    padding-top: 240px; }
+    padding-top: 250px; }
   .bx-wrapper .bx-controls {
     position: absolute;
     bottom: 40px;
