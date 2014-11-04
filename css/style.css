@@ -1365,7 +1365,7 @@ footer {
       background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat; }
   .slider .slide3 {
     background: url(../images/ds/ds-truly-unique-img.jpg) 50% -70px no-repeat;
-    height: 449px !important; }
+    height: 529px !important; }
     .slider .slide3 p {
       line-height: 2em; }
     .slider .slide3 .indent {
@@ -1379,9 +1379,9 @@ footer {
     background: none;
     border: none;
     box-shadow: none;
-    height: 499px !important; }
+    height: 579px !important; }
   .bx-wrapper .bxslider .container {
-    padding-top: 200px; }
+    padding-top: 240px; }
   .bx-wrapper .bx-controls {
     position: absolute;
     bottom: 40px;
@@ -1398,10 +1398,12 @@ footer {
     top: -120px; }
     .bx-wrapper .bx-controls-direction a.bx-prev {
       left: -470px;
-      left: -470%; }
+      left: -470%;
+      display: none; }
     .bx-wrapper .bx-controls-direction a.bx-next {
       left: 575px;
-      left: 570%; }
+      left: 570%;
+      display: none; }
 
 .scoll {
   text-align: center;
