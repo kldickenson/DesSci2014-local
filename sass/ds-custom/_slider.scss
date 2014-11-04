@@ -1,7 +1,11 @@
 /*! custom homepage slider styling for Design Science 2014 redesign */
 
+$slide-hight: 289px + 100px;
+
 .slider	{
-	background: url(../images/ds/slider-bkgd.jpg) 50% top no-repeat;
+	//background: url(../images/ds/slider-bkgd.jpg) 50% top no-repeat;
+	background: $blue-dark;
+
 	z-index: 50;
 	h5	{
 		color: white;
@@ -33,7 +37,7 @@
 	}
 	.slide3	{
 		background: url(../images/ds/ds-truly-unique-img.jpg) 50% -70px no-repeat;
-		height: 289px + 160px !important;
+		height: $slide-hight + 160px !important;
 		
 		p	{
 			line-height: 2em;
@@ -56,11 +60,11 @@
 		background: none;
 		border: none;
 		box-shadow: none;
-		height: 289px + 160px +50px !important;
+		height: $slide-hight + 160px +50px !important;
 	}
 	.bxslider	{
 		.container	{
-			padding-top: 200px;
+			padding-top: 200px + 50px;
 
 		}
 	}
@@ -88,10 +92,12 @@
 		&.bx-prev	{
 			left: -470px;
 			left: -470%;
+			display: none;
 		}
 		&.bx-next	{
 			left: 575px;
 			left: 570%;
+			display: none;
 		}
 	}
 	
