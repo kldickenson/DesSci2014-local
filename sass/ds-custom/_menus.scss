@@ -10,7 +10,7 @@
     
     /* first level */
     & > ul	{
-		position: absolute; right: -1px; top: -11px;
+		position: absolute; right: -5px; top: -11px;
 		height: $main-header-height; width: auto;
 		margin: 0; padding: 0;
 		z-index: 200;
@@ -22,11 +22,12 @@
 			padding: 0; margin: 0;
 			
 			a {
+				//display:inline-block;
 				display:block;
 				//float: left;
 				$padding-top-bottom: 35px;
 				height: ($main-header-height - ($padding-top-bottom*2));
-				padding: $padding-top-bottom 1.5em;
+				padding: $padding-top-bottom 1em;
 				font-size: 1rem;
 				font-weight: bold;
 				position: relative;
@@ -41,12 +42,12 @@
 				}
 			}
 			
-			&:hover ul	{
+			&:hover ul.level-1	{
 				display: block;
 			}
 	    
 			/* second level */
-			ul	{
+			ul.level-1	{
 				position: absolute; top: $main-header-height; left: 0;
 				margin: 0; padding: 0;
 				width: 15em;
@@ -122,31 +123,30 @@
 	}
 }
 
-
-
-@media only screen and (max-width: 600px)	{
+@media only screen and (max-width: 767px)	{
 	#nav	{
 		position: relative;
-//		top: 50px;
 
 		&:not( :target ) > a:first-of-type,
         &:target > a:last-of-type	{
             display: inline-block;
             position: absolute;
-            top: -40px; right: 5px;
-            }
+            top: -15px; right: 5px;
+            color: $blue-light;
+            font-weight: bold;
+        }
 
 		&:target > ul	{
-            display: block;	            	
+            display: block;	
+            margin-top: 10px;            	
 		}
 
 		& > ul	{
 			height: auto;
 	        display: none;
 	        position: absolute;
-//	        left: 0;
-//	        right: 0;
-	        top: 0;
+			width: 80%;
+	        top: 0; right: 0;
 	        margin: 0; padding: 0;
 
 			li	{
@@ -157,12 +157,13 @@
 	            
 	           & > a	{
 		            color: white;
-		            background-color: rgba($blue-dark, .8);
+		            background-color: rgba($blue-dark, .75);
 		            text-align: left;
 		            height: auto;
-		            padding: .5em 1em;
+		            padding: .5em 0 .5em 5%;
+		            width: 95%;
 					&:hover	{
-						background-color: rgba($blue-medium, .8);
+						background-color: rgba($blue-medium, .75);
 	            	}
             	}
 				a	{
@@ -170,37 +171,37 @@
 		            color: white;
 		            text-align: left;
 		            height: auto;
-		            padding: .5em 1em;
+		            padding: .5em 0 .5em 5%;
+		            width: 95%;
 					&:hover	{
 						color: white;
 						background-color: $blue-light;
-//						border-bottom: 1px solid white;
 	            	}
             	}
 			
 				/* second level */
-				ul	{
+				ul.level-1	{
 					display: block;
 			        position: static;
 			        width: 100%;
 
 					li	{
-						width: 100%;
 
 						a	{
-							padding-left:3em;
-							background-color: rgba($blue-medium, .8);
+							padding: .5em 0 .5em 10%;
+							width: 90%;
+							background-color: rgba($blue-medium, .75);
 							color: white;
 							&:hover	{
 								background-color: $blue-light;
-//								border-bottom: 1px solid white;
 							}
 						}
 						&.info-footer a {
 							background: none;
-							padding: .5em .5em .5em 3em;
+							padding: .5em 0 .5em 10%;
+							width: 90%;
 							border-top: none;
-							background-color: rgba($blue-medium, .8);
+							background-color: rgba($blue-medium, .75);
 							color: white;
 							&:hover	{
 								background-color: $blue-light;
@@ -236,7 +237,9 @@
 	&:first-child a	{
 		padding-left: 0;
 	}
-
+	@media only screen and (max-width: 767px)	{
+		display: none;
+	}
 }
 
 .menu-footer	{
@@ -244,7 +247,8 @@
 	float: left;
 	margin-top: 20px;
 	
-	@media only screen and (max-width: 600px)	{
+	@media only screen and (max-width: 767px)	{
+		display: block;
 		text-align: center;
 		margin-top: .5rem;
 		margin-bottom: 0;
@@ -254,30 +258,42 @@
 			margin-bottom: 0;
 		}
 	}
-
 }
 
 .breadcrumbs	{
 	@extend .utility;
 	float: left;
 	position: absolute;
-	top: 1rem; left:10px;
+	top: 4.2rem; left:10px;
 	text-transform: uppercase;
-	a	{
-		
+	li	{
 		&:after	{
-			margin-left: 1em;;
+			margin: 0 1em 0 0;
 			content: "/";
+			color: $blue-light;
 			}
-	}
-	&:first-child a	{
-		padding-left: 0;
-		color: $blue-light;
-
-	}
+		&.current-page	{
+			&:after	{
+				content: "";
+				color: white;
+			}
+		}
+		a	{
+			
+			&:hover, &:focus	{
+				color: $blue-light !important;
+				text-decoration: underline;
+			}
+		}
+		&:first-child a	{
+			padding-left: 0;
+			color: $blue-light;
 	
-	@media only screen and (max-width: 600px)	{
-		top: 4.2rem;
+		}
+	}	
+	@media only screen and (max-width: 767px)	{
+		display: block;
+		//top: 4.2rem;
 		left: 0;	
 	}
 }

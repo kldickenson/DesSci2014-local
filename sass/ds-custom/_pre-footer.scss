@@ -4,6 +4,8 @@
 	background: $blue-dark;
 	color: $blue-light;
 	border-bottom: 1px solid black;
+	// Need to hide the pre-footer until there is event and feature data!
+	display: none;
 	
 	h4	{
 		float: left;
