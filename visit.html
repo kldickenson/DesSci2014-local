@@ -43,6 +43,8 @@
 	<!-- Slider files -->
 	<!-- jQuery library (served from Google) -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- - - - - For mobile menu- - - -  -->
+	<script src="js/doubletaptogo.js"></script>
 	
 </head>
 <body class="visit">
@@ -193,5 +195,12 @@
 	});
 </script>
 -->
+<!-- - - - - For mobile menu- - - -  -->
+<script>
+	$( function()
+	{
+		$( '#nav li:has(ul)' ).doubleTapToGo();
+	});
+</script>
 </body>
 </html>

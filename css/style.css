@@ -1371,6 +1371,12 @@ footer {
     .slider .slide3 .indent {
       padding-left: 70px; }
 
+.homepage2 .bxslider .container {
+  display: flex; }
+  .homepage2 .bxslider .container .left, .homepage2 .bxslider .container .right {
+    order: 1;
+    flex-grow: 1; }
+
 .bx-wrapper {
   background: none;
   margin-bottom: 0;
@@ -1382,6 +1388,17 @@ footer {
     height: 599px !important; }
   .bx-wrapper .bxslider .container {
     padding-top: 250px; }
+    .bx-wrapper .bxslider .container .scroll-up, .bx-wrapper .bxslider .container .scroll-down {
+      display: block;
+      height: 20px;
+      width: 100%;
+      background: url(images/connector-arrow-up-resting.png) 50% 50% no-repeat; }
+      .bx-wrapper .bxslider .container .scroll-up:hover, .bx-wrapper .bxslider .container .scroll-down:hover, .bx-wrapper .bxslider .container .scroll-up:focus, .bx-wrapper .bxslider .container .scroll-down:focus {
+        background-image: url(images/connector-arrow-up-hover.png); }
+    .bx-wrapper .bxslider .container .scroll-down {
+      background-image: url(images/connector-arrow-down-resting.png); }
+      .bx-wrapper .bxslider .container .scroll-down:hover, .bx-wrapper .bxslider .container .scroll-down:focus {
+        background-image: url(images/connector-arrow-down-hover.png); }
   .bx-wrapper .bx-controls {
     position: absolute;
     bottom: 40px;
