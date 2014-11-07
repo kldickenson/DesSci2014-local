@@ -76,7 +76,7 @@ $slide-height: 289px + 100px;
 //		min-height: 40rem;
 
 		@media screen and (max-width: 600px)	{
-			padding: 10rem 0;
+//			padding: 10rem 0;
 		}
 
 		&.slide-3	{
@@ -100,7 +100,7 @@ $slide-height: 289px + 100px;
 			@media screen and (max-width: 600px)	{
 				font-size: 85%;
 
-				h5, h2, p	{
+				h5, h2, p, a.icon	{
 					text-align: center;
 				}
 				
@@ -177,14 +177,18 @@ $slide-height: 289px + 100px;
 			}
 		}
 	}
+	.bx-pager	{
+		bottom: 20px;
+	}
 	.bx-controls	{
 		position: absolute;
-		bottom: 40px; left: 45%;
+		bottom: 40px; 
+		left: 45%;
 		width: 100px;
 		background: transparent;
 		
 		.bx-pager.bx-default-pager	{
-			padding-top: 10px;
+//			padding-top: 10px;
 				
 			a	{
 				background: white;  

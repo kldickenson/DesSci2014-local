@@ -1391,9 +1391,6 @@ footer {
   justify-content: center;
   padding-top: 20rem;
   padding-bottom: 10rem; }
-  @media screen and (max-width: 600px) {
-    .homepage2 .flex-container {
-      padding: 10rem 0; } }
   .homepage2 .flex-container .flex-item {
     max-width: 28rem;
     padding: 0 1rem;
@@ -1403,7 +1400,7 @@ footer {
     @media screen and (max-width: 600px) {
       .homepage2 .flex-container .flex-item {
         font-size: 85%; }
-        .homepage2 .flex-container .flex-item h5, .homepage2 .flex-container .flex-item h2, .homepage2 .flex-container .flex-item p {
+        .homepage2 .flex-container .flex-item h5, .homepage2 .flex-container .flex-item h2, .homepage2 .flex-container .flex-item p, .homepage2 .flex-container .flex-item a.icon {
           text-align: center; } }
 
 .bx-wrapper {
@@ -1438,18 +1435,18 @@ footer {
       color: #ffcf01;
       padding-right: 25px;
       background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat; }
+  .bx-wrapper .bx-pager {
+    bottom: 20px; }
   .bx-wrapper .bx-controls {
     position: absolute;
     bottom: 40px;
     left: 45%;
     width: 100px;
     background: transparent; }
-    .bx-wrapper .bx-controls .bx-pager.bx-default-pager {
-      padding-top: 10px; }
-      .bx-wrapper .bx-controls .bx-pager.bx-default-pager a {
-        background: white; }
-        .bx-wrapper .bx-controls .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-controls .bx-pager.bx-default-pager a.active {
-          background: #ffcf01; }
+    .bx-wrapper .bx-controls .bx-pager.bx-default-pager a {
+      background: white; }
+      .bx-wrapper .bx-controls .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-controls .bx-pager.bx-default-pager a.active {
+        background: #ffcf01; }
   .bx-wrapper .bx-controls-direction a {
     top: -120px; }
     .bx-wrapper .bx-controls-direction a.bx-prev {
