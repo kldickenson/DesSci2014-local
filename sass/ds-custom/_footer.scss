@@ -1,11 +1,13 @@
 /*! custom footer styling for Design Science 2014 redesign */
 
-	$padding-top: 20px;
+	$padding-top: 10px;
 
 footer	{
 	height: $footer-height - $padding-top;
 	padding-top: $padding-top;
+	margin-top: $padding-top;
 	background: $blue-dark;
+	border-top: 1px solid white;
 
 	@media only screen and (max-width: 600px)	{
 		padding-top: 0;

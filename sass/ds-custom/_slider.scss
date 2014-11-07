@@ -1,6 +1,6 @@
 /*! custom homepage slider styling for Design Science 2014 redesign */
 
-$slide-hight: 289px + 100px;
+$slide-height: 289px + 100px;
 
 .slider	{
 	//background: url(../images/ds/slider-bkgd.jpg) 50% top no-repeat;
@@ -12,7 +12,7 @@ $slide-hight: 289px + 100px;
 	}
 	h2	{
 		color: $yellow;
-		font-size: 40px;
+		font-size: 2,5rem;
 	}
 	
 	p	{
@@ -36,14 +36,75 @@ $slide-hight: 289px + 100px;
 
 	}
 	.slide3	{
-		background: url(../images/ds/ds-truly-unique-img.jpg) 50% -70px no-repeat;
-		height: $slide-hight + 160px !important;
+		background: url(../images/ds/ds-truly-unique-img.jpg) 50% bottom no-repeat;
+//		height: $slide-height + 160px !important;
 		
 		p	{
 			line-height: 2em;
 		}
 		.indent	{
 			padding-left: 70px;
+		}
+	}
+}
+.homepage2	{
+	
+	header	{
+		position: fixed;
+		z-index: 2000;
+		background: none;
+	}
+	
+	.content	{
+		padding-top: 0;
+	}
+		
+	.flex-container	{
+
+		display: -webkit-flex; /* for Safari */
+		display: flex;
+		-webkit-flex-direction: row; /* for Safari */
+		flex-flow: row; /* wrap;*/
+//		-webkit-align-items: center; /* for Safari */
+//		align-items: center;
+		-webkit-justify-content: center; /* for Safari */
+		justify-content: center;
+//		background-image: ;
+//		padding: 20rem 0 10rem;
+		padding-top: 20rem;
+		padding-bottom: 10rem;
+//		min-height: 40rem;
+
+		@media screen and (max-width: 600px)	{
+			padding: 10rem 0;
+		}
+
+		&.slide-3	{
+//			padding: 17rem 0;
+
+		}
+		
+		.flex-item	{
+			max-width: 28rem;
+			padding: 0 1rem;
+			margin: 0;
+//			height: 250px;
+//			order: 1;
+//			flex-grow: 0;
+//			flex-shrink: 0;
+
+			img	{
+				margin: 0 auto;
+			}
+			
+			@media screen and (max-width: 600px)	{
+				font-size: 85%;
+
+				h5, h2, p	{
+					text-align: center;
+				}
+				
+			}
 		}
 	}
 }
@@ -60,12 +121,60 @@ $slide-hight: 289px + 100px;
 		background: none;
 		border: none;
 		box-shadow: none;
-		height: $slide-hight + 160px +50px !important;
+//		height: $slide-height + 160px +50px !important;
+		
+		@media screen and (max-width: 875px)	{
+//			height: $slide-height + 160px + 50px + 20px !important;
+		}	
+		@media screen and (max-width: 710px)	{
+//			height: $slide-height + 160px + 50px + 60px !important;
+		}	
 	}
 	.bxslider	{
-		.container	{
-			padding-top: 200px + 50px;
 
+		li		{
+			margin-bottom: 0;
+			
+		}
+		.container, .flex-container	{
+//			padding-top: 200px + 50px;
+			
+			a.scroll-up	{
+				display: block;
+				height: 30px;
+				width: 20rem;
+				background: url(images/connector-arrow-up-resting.png) center 50% no-repeat;
+
+				&:hover, &:focus	{
+					background-image: url(images/connector-arrow-up-hover.png);
+				}
+				
+			}
+			a.scroll-down	{
+				@extend a.scroll-up;
+				background-image: url(images/connector-arrow-down-resting.png);
+				
+				&:hover, &:focus	{
+					background-image: url(images/connector-arrow-down-hover.png);
+				}
+			}
+			ul.selector	{
+				margin: 0;
+				width: 20rem;
+				text-align: center;
+				text-align: center;
+//				margin-top: 40px;
+				.active	{
+					a	{
+						font-size: 1.5em;
+						font-weight: bold;
+						color: $yellow;
+						padding-right: 25px;
+						background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
+					}
+				}
+
+			}
 		}
 	}
 	.bx-controls	{
@@ -103,23 +212,10 @@ $slide-hight: 289px + 100px;
 	
 }
 
-.scoll	{
-	text-align: center;
-	margin-top: 40px;
-	
-	.active	{
-		a	{
-			font-size: 1.5em;
-			font-weight: bold;
-			color: $yellow;
-			padding-right: 25px;
-			background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
-		}
-	}
-}
 
 .image-bubbles	{
 	$height-width: 72px;
+	
 	li	{
 		width: $height-width; height: $height-width;
 		float: left;
@@ -138,12 +234,16 @@ $slide-hight: 289px + 100px;
 	img	{
 		width: $height-width +3px; height: $height-width +3px;
 	}
+	&.connector-scroll	{
+		overflow: scroll;
+		height: 260px !important;
+	}	
 }
 
 .text	{
 	$height-width: 72px;
 	li	{
-		width: 100%;
+		width: 20rem;
 		float: none;
 		clear: both;
 		border: none;
