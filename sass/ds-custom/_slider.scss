@@ -65,15 +65,10 @@ $slide-height: 289px + 100px;
 		display: flex;
 		-webkit-flex-direction: row; /* for Safari */
 		flex-flow: row; /* wrap;*/
-//		-webkit-align-items: center; /* for Safari */
-//		align-items: center;
 		-webkit-justify-content: center; /* for Safari */
 		justify-content: center;
-//		background-image: ;
-//		padding: 20rem 0 10rem;
 		padding-top: 20rem;
 		padding-bottom: 10rem;
-//		min-height: 40rem;
 
 		@media screen and (max-width: 600px)	{
 //			padding: 10rem 0;
@@ -238,10 +233,6 @@ $slide-height: 289px + 100px;
 	img	{
 		width: $height-width +3px; height: $height-width +3px;
 	}
-	&.connector-scroll	{
-		overflow: scroll;
-		height: 260px !important;
-	}	
 }
 
 .text	{

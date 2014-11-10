@@ -982,6 +982,89 @@ or wrap each row of columns in a <div class="row"> */
   font-size: .85em;
   padding: 10px; }
 
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+.jspContainer {
+  overflow: hidden;
+  position: relative; }
+
+.jspPane {
+  position: absolute; }
+
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: red; }
+
+.jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: red; }
+
+.jspCap {
+  display: none; }
+
+.jspHorizontalBar .jspCap {
+  float: left; }
+
+.jspTrack {
+  background: #dde;
+  position: relative; }
+
+.jspDrag {
+  background: #bbd;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer; }
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%; }
+
+.jspArrow {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  margin: 0; }
+
+.jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d; }
+
+.jspVerticalBar .jspArrow {
+  height: 16px; }
+
+.jspHorizontalBar .jspArrow {
+  width: 16px;
+  float: left;
+  height: 100%; }
+
+.jspVerticalBar .jspArrow:focus {
+  outline: none; }
+
+.jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%; }
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner {
+  margin: 0 -3px 0 0; }
+
 /*!
 Custom CSS for Design Science 2014 redesign
 Created October 2, 2014 by WTW Design Group http://wtwdesigngroup.com
@@ -1473,9 +1556,6 @@ footer {
 .image-bubbles img {
   width: 75px;
   height: 75px; }
-.image-bubbles.connector-scroll {
-  overflow: scroll;
-  height: 260px !important; }
 
 .text li {
   width: 20rem;
@@ -1490,58 +1570,52 @@ footer {
 .text div {
   padding-top: 10px; }
 
-/*! custom scroll bar styling for Design Science 2014 redesign */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px; }
+/*! custom scroll bar styling via jScrollPane for Design Science 2014 redesign */
+.scroll-pane {
+  max-width: 28em;
+  height: 260px;
+  overflow: auto; }
+  .scroll-pane .jspCapTop, .scroll-pane .jspCapBottom {
+    color: yellow;
+    background: yellow; }
+  .scroll-pane .jspCorner {
+    display: none;
+    background: rgba(255, 255, 255, 0.3); }
+  .scroll-pane .jspTrack {
+    background: #002e5e;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 9px;
+    margin-left: 6px; }
+  .scroll-pane .jspDrag {
+    background-color: rgba(255, 255, 255, 0.3); }
+  .scroll-pane .jspVerticalBar {
+    width: 21px;
+    background: #002e5e; }
+    .scroll-pane .jspVerticalBar .jspArrowUp {
+      width: 21px;
+      height: 21px;
+      color: #002e5e;
+      background: #002e5e url(images/connector-slider-up-resting.png) left top no-repeat; }
+    .scroll-pane .jspVerticalBar .jspArrowDown {
+      width: 21px;
+      height: 21px;
+      color: #002e5e;
+      background: #002e5e url(images/connector-slider-down-resting.png) left bottom no-repeat; }
+  .scroll-pane .jspHorizontalBar {
+    display: none; }
+    .scroll-pane .jspHorizontalBar .jspCap, .scroll-pane .jspHorizontalBar .jspTrack, .scroll-pane .jspHorizontalBar .jspDrag {
+      display: none; }
 
-/* to hide horizonal scroll bar */
-::-webkit-scrollbar:horizontal {
-  display: none; }
-
-/* Turn on single button up on top, and down on bottom */
-::-webkit-scrollbar-button:start:decrement,
-::-webkit-scrollbar-button:end:increment {
-  display: block; }
-
-/* Turn off the down area up on top, and up area on bottom */
-::-webkit-scrollbar-button:start:increment,
-::-webkit-scrollbar-button:end:decrement {
-  display: none; }
-
-/* Place The scroll down button at the bottom */
-::-webkit-scrollbar-button:end:increment {
-  background-image: url(images/connector-slider-down-resting.png);
-  height: 21px;
-  width: 21px; }
-
-/* Place The scroll up button at the up */
-::-webkit-scrollbar-button:start:decrement {
-  background-image: url(images/connector-slider-up-resting.png);
-  height: 21px;
-  width: 21px; }
-
-/* Top area above thumb and below up button */
-/* Bottom area below thumb and down button */
-::-webkit-scrollbar-track-piece:vertical:end {
-  background-position: bottom left, 0 0; }
-
-/* The thumb itself */
-::-webkit-scrollbar-thumb:vertical {
-  width: 8px;
-  background-color: rgba(255, 255, 255, 0.3); }
-
-/* Corner */
-::-webkit-scrollbar-corner:vertical {
-  background-color: #002e5e;
-  color: #002e5e;
-  display: none; }
-
-/* Resizer */
-::-webkit-scrollbar-resizer:vertical {
-  background-color: #002e5e;
-  color: #002e5e;
-  display: none; }
+.image-bubbles.text {
+  /* to hide horizonal scroll bar */
+  /* Turn on single button up on top, and down on bottom */
+  /* Turn off the down area up on top, and up area on bottom */
+  /* Place The scroll down button at the bottom */
+  /* Place The scroll up button at the up */
+  /* Top area above thumb and below up button */
+  /* Bottom area below thumb and down button */
+  /* The thumb itself */
+  /* Corner */ }
 
 /*! custom Visit Us page styling for Design Science 2014 redesign */
 .visit header {
