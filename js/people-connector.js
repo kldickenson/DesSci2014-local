@@ -182,6 +182,14 @@ Include these libraries:
 		  	}
 		  });
 
+          //update faculty when user click selector
+          $('.slick-slide').find('a').on('click', function() {
+            var self = $(this);
+            var slideIndex = self.parents('.slick-slide').attr('index');
+            var optionsSelector = self.parents('div.slick-slider');
+            optionsSelector.slickGoTo(parseInt(slideIndex));
+          });
+
 		  //init people connector
 		  (function() {
 		  	var activeIndex;
@@ -198,14 +206,6 @@ Include these libraries:
 		  	}
 
 		  })();
-
-		  //update faculty when user click selector
-		  $('.slick-slide').find('a').on('click', function() {
-		  	var self = $(this);
-		  	var slideIndex = self.parents('.slick-slide').attr('index');
-		  	var optionsSelector = self.parents('div.slick-slider');
-		  	optionsSelector.slickGoTo(parseInt(slideIndex));
-		  });
 
 		});
 	}
