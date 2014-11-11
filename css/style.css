@@ -1400,10 +1400,10 @@ header {
 
 /*! custom footer styling for Design Science 2014 redesign */
 footer {
+  clear: both;
   height: 80px;
   padding-top: 10px;
   margin-top: 0;
-  background: #002e5e;
   border-top: 1px solid white; }
   @media only screen and (max-width: 600px) {
     footer {
@@ -1429,12 +1429,15 @@ footer {
 /*! custom homepage slider styling for Design Science 2014 redesign */
 .slider {
   background: #002e5e;
-  z-index: 50; }
+  z-index: 50;
+  top: 0;
+  float: left;
+  margin-top: -170px; }
   .slider h5 {
     color: white; }
   .slider h2 {
     color: #ffcf01;
-    font-size: 2,5rem; }
+    font-size: 2.5rem; }
   .slider p {
     color: white; }
   .slider a {
@@ -1448,19 +1451,8 @@ footer {
       color: #ffcf01;
       padding-right: 25px;
       background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat; }
-  .slider .slide3 {
-    background: url(../images/ds/ds-truly-unique-img.jpg) 50% bottom repeat-y; }
-    .slider .slide3 p {
-      line-height: 2em; }
-    .slider .slide3 .indent {
-      padding-left: 70px; }
 
-.homepage2 header {
-  z-index: 2000;
-  background: none; }
-.homepage2 .content {
-  padding-top: 0; }
-.homepage2 .flex-container {
+.flex-container {
   display: -webkit-flex;
   /* for Safari */
   display: flex;
@@ -1471,24 +1463,54 @@ footer {
   -webkit-justify-content: center;
   /* for Safari */
   justify-content: center;
-  padding-top: 20rem;
-  padding-bottom: 5rem; }
-  .homepage2 .flex-container .flex-item {
+  padding-top: 18rem;
+  padding-bottom: 10rem; }
+  .flex-container .flex-item {
     max-width: 28rem;
     padding: 0 1rem;
     margin: 0; }
-    .homepage2 .flex-container .flex-item img {
+    .flex-container .flex-item img {
       margin: 0 auto; }
     @media screen and (max-width: 600px) {
-      .homepage2 .flex-container .flex-item {
+      .flex-container .flex-item {
         font-size: 85%; }
-        .homepage2 .flex-container .flex-item h5, .homepage2 .flex-container .flex-item h2, .homepage2 .flex-container .flex-item p, .homepage2 .flex-container .flex-item a.icon {
+        .flex-container .flex-item h5, .flex-container .flex-item h2, .flex-container .flex-item p, .flex-container .flex-item a.icon {
           text-align: center; } }
+  .flex-container a.scroll-up, .flex-container a.scroll-down {
+    display: block;
+    height: 30px;
+    width: 20rem;
+    background: url(images/connector-arrow-up-resting.png) center 50% no-repeat; }
+    .flex-container a.scroll-up:hover, .flex-container a.scroll-down:hover, .flex-container a.scroll-up:focus, .flex-container a.scroll-down:focus {
+      background-image: url(images/connector-arrow-up-hover.png); }
+  .flex-container a.scroll-down {
+    background-image: url(images/connector-arrow-down-resting.png); }
+    .flex-container a.scroll-down:hover, .flex-container a.scroll-down:focus {
+      background-image: url(images/connector-arrow-down-hover.png); }
+  .flex-container .selector {
+    margin: 0;
+    max-width: 20rem;
+    text-align: center;
+    text-align: center; }
+    .flex-container .selector .active a {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ffcf01;
+      padding-right: 25px;
+      background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat; }
+
+.slide3 {
+  background: url(../images/ds/ds-truly-unique-img.jpg) 50% bottom repeat-y;
+  padding-top: 23rem;
+  padding-bottom: 15rem; }
+  .slide3 p {
+    line-height: 2em; }
+  .slide3 .indent {
+    padding-left: 70px; }
 
 .bx-wrapper {
   background: none;
-  margin: 0 auto;
-  position: relative; }
+  margin: 0 auto; }
   .bx-wrapper .bx-viewport {
     background: none;
     border: none;
@@ -1499,30 +1521,9 @@ footer {
     margin-bottom: 0; }
     .bx-wrapper .bxslider li {
       margin-bottom: 0; }
-    .bx-wrapper .bxslider .container a.scroll-up, .bx-wrapper .bxslider .container a.scroll-down, .bx-wrapper .bxslider .flex-container a.scroll-up, .bx-wrapper .bxslider .flex-container a.scroll-down {
-      display: block;
-      height: 30px;
-      width: 20rem;
-      background: url(images/connector-arrow-up-resting.png) center 50% no-repeat; }
-      .bx-wrapper .bxslider .container a.scroll-up:hover, .bx-wrapper .bxslider .container a.scroll-down:hover, .bx-wrapper .bxslider .container a.scroll-up:focus, .bx-wrapper .bxslider .container a.scroll-down:focus, .bx-wrapper .bxslider .flex-container a.scroll-up:hover, .bx-wrapper .bxslider .flex-container a.scroll-down:hover, .bx-wrapper .bxslider .flex-container a.scroll-up:focus, .bx-wrapper .bxslider .flex-container a.scroll-down:focus {
-        background-image: url(images/connector-arrow-up-hover.png); }
-    .bx-wrapper .bxslider .container a.scroll-down, .bx-wrapper .bxslider .flex-container a.scroll-down {
-      background-image: url(images/connector-arrow-down-resting.png); }
-      .bx-wrapper .bxslider .container a.scroll-down:hover, .bx-wrapper .bxslider .container a.scroll-down:focus, .bx-wrapper .bxslider .flex-container a.scroll-down:hover, .bx-wrapper .bxslider .flex-container a.scroll-down:focus {
-        background-image: url(images/connector-arrow-down-hover.png); }
-    .bx-wrapper .bxslider .container .selector, .bx-wrapper .bxslider .flex-container .selector {
-      margin: 0;
-      width: 20rem;
-      text-align: center;
-      text-align: center; }
-      .bx-wrapper .bxslider .container .selector .active a, .bx-wrapper .bxslider .flex-container .selector .active a {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: #ffcf01;
-        padding-right: 25px;
-        background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat; }
   .bx-wrapper .bx-controls {
     position: relative;
+    bottom: 50px;
     left: 45%;
     width: 100px; }
     .bx-wrapper .bx-controls .bx-pager-item {
@@ -1773,12 +1774,20 @@ h2.page-title {
 .indent {
   padding-left: 10px; }
 
+/*! homepage specific styling for Design Science 2014 redesign */
 body.homepage header {
   height: 145px;
   background: none;
-  z-index: 1000; }
+  z-index: 2000; }
 
 body.homepage .content {
   padding-top: 0; }
+
+.homepage2 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background: none; }
 
 /*# sourceMappingURL=style.css.map */

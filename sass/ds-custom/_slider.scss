@@ -5,14 +5,18 @@ $slide-height: 289px + 100px;
 .slider	{
 	//background: url(../images/ds/slider-bkgd.jpg) 50% top no-repeat;
 	background: $blue-dark;
-
 	z-index: 50;
+//	position: absolute;
+	top: 0;
+	float: left;
+	margin-top: -($utility-height + $main-header-height + 40px);
+	
 	h5	{
 		color: white;
 	}
 	h2	{
 		color: $yellow;
-		font-size: 2,5rem;
+		font-size: 2.5rem;
 	}
 	
 	p	{
@@ -33,76 +37,92 @@ $slide-height: 289px + 100px;
 			padding-right: 25px;
 			background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
 		}
-
 	}
-	.slide3	{
-		background: url(../images/ds/ds-truly-unique-img.jpg) 50% bottom repeat-y;
-//		height: $slide-height + 160px !important;
-//		padding-bottom: 10rem;
-		
-		p	{
-			line-height: 2em;
+}
+
+.flex-container	{
+	display: -webkit-flex; /* for Safari */
+	display: flex;
+	-webkit-flex-direction: row; /* for Safari */
+	flex-flow: row; /* wrap;*/
+	-webkit-justify-content: center; /* for Safari */
+	justify-content: center;
+	padding-top: 18rem;
+	padding-bottom: 10rem;
+
+	@media screen and (max-width: 600px)	{
+//			padding: 10rem 0;
+	}
+	.flex-item	{
+		max-width: 28rem;
+		padding: 0 1rem;
+		margin: 0;
+
+		img	{
+			margin: 0 auto;
 		}
-		.indent	{
-			padding-left: 70px;
+		
+		@media screen and (max-width: 600px)	{
+			font-size: 85%;
+
+			h5, h2, p, a.icon	{
+				text-align: center;
+			}
+		}
+	}
+	a.scroll-up	{
+	display: block;
+	height: 30px;
+	width: 20rem;
+	background: url(images/connector-arrow-up-resting.png) center 50% no-repeat;
+
+	&:hover, &:focus	{
+		background-image: url(images/connector-arrow-up-hover.png);
+	}
+	
+	}
+	a.scroll-down	{
+		@extend a.scroll-up;
+		background-image: url(images/connector-arrow-down-resting.png);
+		
+		&:hover, &:focus	{
+			background-image: url(images/connector-arrow-down-hover.png);
+		}
+	}
+	.selector	{
+		margin: 0;
+		max-width: 20rem;
+		text-align: center;
+		text-align: center;
+		.active	{
+			a	{
+				font-size: 1.5em;
+				font-weight: bold;
+				color: $yellow;
+				padding-right: 25px;
+				background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
+			}
 		}
 	}
 }
 
-.homepage2	{
+.slide3	{
+	background: url(../images/ds/ds-truly-unique-img.jpg) 50% bottom repeat-y;
+//		height: $slide-height + 160px !important;
+	padding-top: 23rem;
+	padding-bottom: 15rem;
 	
-	header	{
-		z-index: 2000;
-		background: none;
+	p	{
+		line-height: 2em;
 	}
-	
-	.content	{
-		padding-top: 0;
-	}
-		
-	.flex-container	{
-
-		display: -webkit-flex; /* for Safari */
-		display: flex;
-		-webkit-flex-direction: row; /* for Safari */
-		flex-flow: row; /* wrap;*/
-		-webkit-justify-content: center; /* for Safari */
-		justify-content: center;
-		padding-top: 20rem;
-		padding-bottom: 5rem;
-
-		@media screen and (max-width: 600px)	{
-//			padding: 10rem 0;
-		}
-
-		
-		.flex-item	{
-			max-width: 28rem;
-			padding: 0 1rem;
-			margin: 0;
-
-			img	{
-				margin: 0 auto;
-			}
-			
-			@media screen and (max-width: 600px)	{
-				font-size: 85%;
-
-				h5, h2, p, a.icon	{
-					text-align: center;
-				}
-			}
-		}
+	.indent	{
+		padding-left: 70px;
 	}
 }
 
 .bx-wrapper	{
 	background: none;
-	//padding-top: 40px;
-	//padding-bottom: 50px;
 	margin: 0 auto;
-	position: relative;
-	
 	.bx-viewport	{
 		background: none;
 		border: none;
@@ -122,50 +142,11 @@ $slide-height: 289px + 100px;
 		
 		li		{
 			margin-bottom: 0;
-			
-		}
-		.container, .flex-container	{
-//			padding-top: 200px + 50px;
-			
-			a.scroll-up	{
-				display: block;
-				height: 30px;
-				width: 20rem;
-				background: url(images/connector-arrow-up-resting.png) center 50% no-repeat;
-
-				&:hover, &:focus	{
-					background-image: url(images/connector-arrow-up-hover.png);
-				}
-				
-			}
-			a.scroll-down	{
-				@extend a.scroll-up;
-				background-image: url(images/connector-arrow-down-resting.png);
-				
-				&:hover, &:focus	{
-					background-image: url(images/connector-arrow-down-hover.png);
-				}
-			}
-			.selector	{
-				margin: 0;
-				width: 20rem;
-				text-align: center;
-				text-align: center;
-				.active	{
-					a	{
-						font-size: 1.5em;
-						font-weight: bold;
-						color: $yellow;
-						padding-right: 25px;
-						background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
-					}
-				}
-			}
 		}
 	}
 	.bx-controls	{
 		position: relative;
-//		bottom: 100px; 
+		bottom: 50px; 
 		left: 45%;
 		width: 100px;
 		
@@ -182,7 +163,6 @@ $slide-height: 289px + 100px;
 			}
 		}
 	}
-		
 	.bx-controls-direction	{
 		display: none;
 	}

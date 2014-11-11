@@ -123,6 +123,7 @@ table {}
 // - - - - - LAYOUT - - - - - 
 
 // See -header.scss for header layout issues
+// See -homepage.scss for homepage specific layout issues
 
 .content	{
 	padding-top: 10.5rem;
@@ -151,16 +152,4 @@ h2.page-title	{
 
 .indent	{
 	padding-left: 10px;
-}
-
-
-// - - - - - Homepage specific - - - - -
-
-body.homepage header	{
-	height: 145px;
-	background: none;
-	z-index: 1000;
-}
-body.homepage .content	{
-	padding-top: 0;
 }
