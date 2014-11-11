@@ -1,0 +1,17 @@
+.pc-options {
+  	margin: 0;
+	width: 20rem;
+	text-align: center;
+}
+
+.slick-vertical .slick-slide {
+	padding: 1px 0;
+}
+
+div.active > a {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #ffcf01;
+	padding-right: 25px;
+	background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
+}
