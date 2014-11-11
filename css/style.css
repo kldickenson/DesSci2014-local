@@ -1787,7 +1787,7 @@ body.homepage .content {
   padding-top: 0; }
 
 .homepage2 header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 2000;
