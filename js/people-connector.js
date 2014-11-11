@@ -121,11 +121,10 @@ Include these libraries:
 
     })
 
-	var template = '<li><a href="#"><span class="img-wrap">' +
-				   '<img src="{{ImageLink}}" alt="" /></span>' +
-				   '<div><strong>{{Name}}</strong>' +
-				   '<br/>{{Title}}<br /></div></a></li>';
-				   // '<br/>{{Title}}<br />Primary research interest</div></a></li>';
+	var template = '<li><span class="img-wrap">' +
+	  '<img src="{{ImageLink}}" alt="" /></span>' +
+	  '<div><a href="{{Website}}" target="_blank"><strong>{{Name}}</strong></a>' +
+	  '<br/><span style="color:#FFF">{{Title}}</span><br /></div></li>';
 
 	var updateActiveTopic = function() {
 		$('.slick-slide').removeClass('active');
