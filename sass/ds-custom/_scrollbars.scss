@@ -1,131 +1,42 @@
-/*! custom scroll bar styling via jScrollPane for Design Science 2014 redesign */
+/*! custom scroll bar styling for Design Science 2014 redesign */
 
-.scroll-pane	{
-	max-width: 28em;
-	height: 260px;
-	overflow: auto;
-
-	.jspCapTop, .jspCapBottom	{
-//		display: none;
-//		height: 2px;
-//		width: 21px; height: 21px;
-		color: yellow;
-		background:  yellow;
-	}
-	.jspCorner	{
-		display: none;
-		background:  rgba($white,.3);
-	}
-
-	.jspTrack	{
-		background: $blue-dark;
-		border: 1px solid rgba($white,.3);
-		width: 9px;
-		margin-left: 6px;
-	}
-	.jspDrag	{
-		background-color: rgba($white,.3);
-//		height: 2rem;
+.connector-selector	{
+	.selector	{
+		height: 220px;
+		overflow: auto;
 		
-	}
-	.jspArrow	{
-//
-	}
-
-	.jspVerticalBar	{
-		width: 21px;
-		background: $blue-dark;
-
-		.jspArrowUp	{
-			width: 21px; height: 21px;
-			color: $blue-dark;
-			background: $blue-dark url(images/connector-slider-up-resting.png) left top no-repeat;
-		}
-		.jspArrowDown	{
-			width: 21px; height: 21px;
-			color: $blue-dark;
-			background: $blue-dark url(images/connector-slider-down-resting.png) left bottom no-repeat;
-			
+		&::-webkit-scrollbar 	{
+			display: none;
 		}
 	}
-
-	.jspHorizontalBar	{
-		display: none;
-		
-		 .jspCap, .jspTrack, .jspDrag	{
-			 
-			 display: none;
-		 }
-
-	}
-
 }
-
-
-.image-bubbles.text	{
-//		max-width: 26rem;
-//		height: 260px;
-//		overflow: hidden;
 	
-	::-webkit-scrollbar {
-//    	width: 8px;
-//    	height: 8px;
-	}
+.custom-scroll	{
+	height: 220px;
+	overflow: auto;
 	
-	/* to hide horizonal scroll bar */
-	::-webkit-scrollbar:horizontal {
- //  		visibility: hidden;
+	&::-webkit-scrollbar              { 
+//			display: none;
+		width: 8px;
+		background: $blue-dark;
+		color:rgba($white,.3);
+		border: 1px solid rgba($white,.3);
 	}
-	 	 
-	 
-	/* Turn on single button up on top, and down on bottom */
-	::-webkit-scrollbar-button:start:decrement,
-	::-webkit-scrollbar-button:end:increment {
-//	    display: block;
+	&::-webkit-scrollbar:horizontal	{
+		display: none;
+	} 
+	&::-webkit-scrollbar-button:no-button     {
+		 
 	}
-	 
-	/* Turn off the down area up on top, and up area on bottom */
-	::-webkit-scrollbar-button:start:increment,
-	::-webkit-scrollbar-button:end:decrement {
-//	    display: none;
+	&::-webkit-scrollbar-track        { /* 3 */ }
+	&::-webkit-scrollbar-track-piece  { /* 4 */ }
+	&::-webkit-scrollbar-thumb        { 
+		background-color: rgba($white,.3);
 	}
-	 
-	/* Place The scroll down button at the bottom */
-	::-webkit-scrollbar-button:end:increment {
-//	    background-image: url(images/connector-slider-down-resting.png);
-//	    height: 21px; width: 21px;
+	&::-webkit-scrollbar-corner       {
+		display:none;
 	}
-	
-	/* Place The scroll up button at the up */
-	::-webkit-scrollbar-button:start:decrement {
-//	    background-image: url(images/connector-slider-up-resting.png);
-//	    height: 21px; width: 21px;
-	}
-
-	/* Top area above thumb and below up button */
-	::-webkit-scrollbar-track-piece:vertical:start {
-	//    background-image: url(images/scroll_gutter_top.png), url(images/scroll_gutter_mid.png);
-	//    background-repeat: no-repeat, repeat-y;
-	}
-	
-	/* Bottom area below thumb and down button */
-	::-webkit-scrollbar-track-piece:vertical:end {
-	 //   background-image: url(images/scroll_gutter_btm.png), url(images/scroll_gutter_mid.png);
-	//    background-repeat: no-repeat, repeat-y;
-	//    background-position: bottom left, 0 0;
-	}
-	
-	/* The thumb itself */
-	::-webkit-scrollbar-thumb:vertical {
-//	    height: 2rem;
-//		width: 8px;
-//	    background-color: rgba(255,255,255,0.3);
-	}
-	 
-	/* Corner */
-	::-webkit-scrollbar-corner:vertical {
-//	    background-color: $blue-dark;
-//	    color: $blue-dark;
-//	    display: none;
+	&::-webkit-resizer                {
+			display:none;
 	}
 }

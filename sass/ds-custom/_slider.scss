@@ -36,8 +36,9 @@ $slide-height: 289px + 100px;
 
 	}
 	.slide3	{
-		background: url(../images/ds/ds-truly-unique-img.jpg) 50% bottom no-repeat;
+		background: url(../images/ds/ds-truly-unique-img.jpg) 50% bottom repeat-y;
 //		height: $slide-height + 160px !important;
+//		padding-bottom: 10rem;
 		
 		p	{
 			line-height: 2em;
@@ -47,10 +48,10 @@ $slide-height: 289px + 100px;
 		}
 	}
 }
+
 .homepage2	{
 	
 	header	{
-		position: fixed;
 		z-index: 2000;
 		background: none;
 	}
@@ -68,25 +69,17 @@ $slide-height: 289px + 100px;
 		-webkit-justify-content: center; /* for Safari */
 		justify-content: center;
 		padding-top: 20rem;
-		padding-bottom: 10rem;
+		padding-bottom: 5rem;
 
 		@media screen and (max-width: 600px)	{
 //			padding: 10rem 0;
 		}
 
-		&.slide-3	{
-//			padding: 17rem 0;
-
-		}
 		
 		.flex-item	{
 			max-width: 28rem;
 			padding: 0 1rem;
 			margin: 0;
-//			height: 250px;
-//			order: 1;
-//			flex-grow: 0;
-//			flex-shrink: 0;
 
 			img	{
 				margin: 0 auto;
@@ -98,7 +91,6 @@ $slide-height: 289px + 100px;
 				h5, h2, p, a.icon	{
 					text-align: center;
 				}
-				
 			}
 		}
 	}
@@ -108,14 +100,14 @@ $slide-height: 289px + 100px;
 	background: none;
 	//padding-top: 40px;
 	//padding-bottom: 50px;
-	margin-bottom: 0;
+	margin: 0 auto;
 	position: relative;
-	
 	
 	.bx-viewport	{
 		background: none;
 		border: none;
 		box-shadow: none;
+		padding: 0; margin: 0;
 //		height: $slide-height + 160px +50px !important;
 		
 		@media screen and (max-width: 875px)	{
@@ -126,7 +118,8 @@ $slide-height: 289px + 100px;
 		}	
 	}
 	.bxslider	{
-
+		margin-bottom: 0;
+		
 		li		{
 			margin-bottom: 0;
 			
@@ -153,12 +146,11 @@ $slide-height: 289px + 100px;
 					background-image: url(images/connector-arrow-down-hover.png);
 				}
 			}
-			ul.selector	{
+			.selector	{
 				margin: 0;
 				width: 20rem;
 				text-align: center;
 				text-align: center;
-//				margin-top: 40px;
 				.active	{
 					a	{
 						font-size: 1.5em;
@@ -168,25 +160,21 @@ $slide-height: 289px + 100px;
 						background: transparent url(../images/ds/scoll-active-icon.png) right 55% no-repeat;
 					}
 				}
-
 			}
 		}
 	}
-	.bx-pager	{
-		bottom: 20px;
-	}
 	.bx-controls	{
-		position: absolute;
-		bottom: 40px; 
+		position: relative;
+//		bottom: 100px; 
 		left: 45%;
 		width: 100px;
-		background: transparent;
 		
-		.bx-pager.bx-default-pager	{
-//			padding-top: 10px;
+		.bx-pager-item	{
+			padding-top: 0;
 				
 			a	{
-				background: white;  
+				background: white;
+				color: white;  
 			
 				&:hover, &.active	{
 					background: $yellow;  
@@ -194,23 +182,11 @@ $slide-height: 289px + 100px;
 			}
 		}
 	}
-	.bx-controls-direction a	{
-		top: -120px;
 		
-		&.bx-prev	{
-			left: -470px;
-			left: -470%;
-			display: none;
-		}
-		&.bx-next	{
-			left: 575px;
-			left: 570%;
-			display: none;
-		}
+	.bx-controls-direction	{
+		display: none;
 	}
-	
 }
-
 
 .image-bubbles	{
 	$height-width: 72px;
