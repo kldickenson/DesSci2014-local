@@ -8,6 +8,7 @@ footer	{
 	padding-top: $padding-top;
 	margin-top: 0;
 	border-top: 1px solid white;
+	background: $blue-dark;
 
 	@media only screen and (max-width: 600px)	{
 		padding-top: 0;

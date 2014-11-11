@@ -7,7 +7,7 @@ body	{
 	line-height: 1.2em;
 	color: $font-color;
 	vertical-align: text-bottom;
-	background: $blue-dark;
+//	background: $blue-dark;
 }
 
 // - - - - - FONTS - - - - - 
@@ -126,16 +126,16 @@ table {}
 // See -homepage.scss for homepage specific layout issues
 
 .content	{
-	padding-top: 10.5rem;
 	z-index: 1;
 	position: relative;
+	top: -50px;
 }
 
 section	{
 	position: relative;
 	
 	.first	{
-		margin-top: 5rem;
+		margin-top: 5.5rem;
 	}
 }
 

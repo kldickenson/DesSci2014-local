@@ -1109,7 +1109,7 @@ header {
   height: 220px;
   background: #002d62 url(../images/ds/DS-header-bkgrd.jpg) 50% center no-repeat;
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0; }
 
@@ -1315,7 +1315,7 @@ header {
 .breadcrumbs {
   float: left;
   position: absolute;
-  top: 4.2rem;
+  top: 4.5rem;
   left: 10px;
   text-transform: uppercase; }
   .breadcrumbs li:after {
@@ -1404,7 +1404,8 @@ footer {
   height: 80px;
   padding-top: 10px;
   margin-top: 0;
-  border-top: 1px solid white; }
+  border-top: 1px solid white;
+  background: #002e5e; }
   @media only screen and (max-width: 600px) {
     footer {
       padding-top: 0;
@@ -1668,8 +1669,7 @@ body {
   font-size: 16.96px;
   line-height: 1.2em;
   color: #000;
-  vertical-align: text-bottom;
-  background: #002e5e; }
+  vertical-align: text-bottom; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
@@ -1753,14 +1753,14 @@ dt {
   margin-top: .5em; }
 
 .content {
-  padding-top: 10.5rem;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  top: -50px; }
 
 section {
   position: relative; }
   section .first {
-    margin-top: 5rem; }
+    margin-top: 5.5rem; }
 
 h2.page-title {
   font-size: 2.0rem;
@@ -1775,6 +1775,9 @@ h2.page-title {
   padding-left: 10px; }
 
 /*! homepage specific styling for Design Science 2014 redesign */
+body.homepage {
+  background: #002e5e; }
+
 body.homepage header {
   height: 145px;
   background: none;
