@@ -1565,6 +1565,11 @@ footer {
   margin-bottom: 10px; }
 .text div {
   padding-top: 10px; }
+.text div.fac-title {
+    color:#FFF;
+    padding-top: 3px;
+    overflow: hidden;
+    height: 60px; }
 
 /*! custom scroll bar styling for Design Science 2014 redesign */
 .connector-selector .selector {
